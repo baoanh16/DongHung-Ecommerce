@@ -1,0 +1,42 @@
+.custom-select
+    position: relative
+    +fz(r(14px))
+    background: #fff
+    text-transform: uppercase
+    .select-show
+        cursor: pointer
+        +lh(1)
+        +pad(r(10px) r(20px))
+        border: 1px solid #d6d6d6
+        +fw(700)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &:after
+            +mdi('\f140')
+            +fz(r(24px))
+    .select-list
+        +pos(abs, 100% null null 0)
+        width: 100%
+        max-height: 200px
+        overflow-y: auto
+        background: #fff
+        display: none
+        z-index: 333
+        +pad(r(10px))
+        border: 1px solid #d6d6d6
+        border-top: 0
+        ul
+            list-style: none
+            padding-left: 0
+            li
+                +pad(r(10px))
+                +fw(500)
+                cursor: pointer
+                &:hover, &.active
+                    background: #f8f5ee
+                    color: #1f2b7a
+                    +fw(700)
+    &.active
+        .select-show, .select-list
+            border-color: #808080

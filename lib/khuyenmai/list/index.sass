@@ -1,0 +1,134 @@
+.dh-khuyenmai
+    padding-bottom: r(40px)
+    position: relative
+    z-index: 60
+    .package
+        display: none
+    .item
+        background: #fff
+        margin-bottom: r(40px)
+        border: 1px solid #d3d3d7
+        border-top: 8px solid
+        max-width: 400px
+        +mar(null auto)
+        .heading
+            border-bottom: 1px solid #d3d3d7
+            +pad(1rem 2rem)
+            h4
+                +fz(1.125rem)
+                +fw(700)
+                text-transform: uppercase
+        .body
+            .img
+                +pad(.8125rem 2.375rem)
+                padding-bottom: 0
+            .price
+                p
+                    +fz(1.5rem)
+                +pad(null 2.375rem)
+                padding-bottom: 0.5625rem
+            .code
+                +pad(.5625rem 2.375rem)
+                border-top: 1px solid #d3d3d7
+                border-bottom: 1px solid #d3d3d7
+            .button
+                +pad(null 2.375rem)
+                padding-top: 1.875rem
+                a
+                    text-decoration: none
+                    color: #fff
+                    +flex-center()
+                    height: 60px
+                    .button-main
+                        +tran(.5s)
+                        +flex-center()
+                        justify-content: flex-start
+                        +pad(null 1.5625rem)
+                        height: 100%
+                        width: calc(100% - 60px)
+                        +fz(1.2rem)
+                    .button-circle
+                        height: 100%
+                        width: 60px
+                        position: relative
+                        &:before
+                            content: ''
+                            width: 80%
+                            height: 80%
+                            +bor-rad(50%)
+                            background: #fff
+                            +pos(abs, 50% null null 50%)
+                            transform: translate(-50%,-50%) scale(0.2)
+                            +tran(.5s)
+                        &:after
+                            content: ''
+                            width: 80%
+                            height: 80%
+                            +bor-rad(50%)
+                            +tran(.5s)
+                            +pos(abs, 50% null null 50%)
+                            transform: translate(-50%,-50%) scale(0)
+                    &:hover
+                        .button-circle
+                            &:after
+                                transform: translate(-50%,-50%) scale(.2)
+                            &:before
+                                transform: translate(-50%,-50%) scale(1)
+                        &._gray
+                            a
+                            background: darken(#d3d3d7, 20%)
+                            .button-circle
+                                &:after
+                                    background: darken(#d3d3d7, 20%)
+                        &._green
+                            a
+                            
+                            background: darken(#97b1a7, 20%)
+                            .button-circle
+                                &:after
+                                    background: darken(#97b1a7, 20%)
+                        &._yellow
+                            a
+                            
+                            background: darken(#d9b99d, 20%)
+                            .button-circle
+                                &:after
+                                    background: darken(#d9b99d, 20%)
+        &._gray
+            border-top-color: #d3d3d7
+            .body
+                .button
+                    a
+                        background: #d3d3d7
+                    .button-circle
+                        &:after
+                            background: #d3d3d7
+        &._green
+            border-top-color: #97b1a7
+            .body
+                .button
+                    a
+                        background: #97b1a7
+                    .button-circle
+                        &:after
+                            background: #97b1a7
+        &._yellow
+            border-top-color: #d9b99d
+            .body
+                .button
+                    a
+                        background: #d9b99d
+                    .button-circle
+                        &:after
+                            background: #d9b99d
+    +media-breakpoint-up(lg)
+        .item
+            max-width: 100%
+            .body
+                .button
+                    a
+                        height: 4.6875rem
+                        .button-main
+                            width: calc(100% - 4.6875rem)
+                        .button-circle
+                            width: 4.6875rem

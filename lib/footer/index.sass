@@ -1,0 +1,241 @@
+.dh-footer
+	position: relative
+	background: #1e1f21
+	padding-top: r(30px)
+	color: #fff
+	// .top-nav
+	//     display: flex
+		// height: 9rem
+	a
+		color: #fff
+		+fz(1.2rem)
+		+lh(1.6)
+		display: block
+		position: relative
+		text-decoration: none
+		
+	ul
+		list-style: none
+		padding-left: 0
+	.first-nav
+		ul
+			li
+				a
+					font-size: 1.2rem
+					&:after
+						content: ''
+						position: absolute
+						left: 1.125rem
+						right: 1.125rem
+						bottom: 0px
+						height: 1px
+						background: #fff
+						transform: scaleX(0)
+						transform-origin: center right
+						transition: transform .45s cubic-bezier(.4,0,0,1)
+					&:hover, &.active
+						&:after
+							transform: scaleX(1)
+							transition: transform .45s cubic-bezier(.4,0,0,1)
+							transform-origin: center left
+	.last-nav
+		margin-bottom: 1rem
+		display: flex
+		align-items: center
+		.user, .language
+			+pad(null .5rem)
+			a
+				text-transform: uppercase
+		img
+			filter: brightness(0) invert(1)
+		.language
+			padding-left: 0
+	.nav-list-active
+		margin-top: 1rem
+		a
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0px
+				height: 1px
+				width: 100%
+				background: #fff
+				transform: scaleX(0)
+				transform-origin: center right
+				transition: transform .45s cubic-bezier(.4,0,0,1)
+			&:hover, &.active
+				&:after
+					transform: scaleX(1)
+					transition: transform .45s cubic-bezier(.4,0,0,1)
+					transform-origin: center left
+	.title
+		margin-bottom: 1rem
+		h5
+			text-transform: uppercase
+			letter-spacing: .15em
+			+fz(1.5rem)
+			+fw(400)
+	.bottom-nav
+		display: flex
+		align-items: center
+		height: 4.5rem
+		justify-content: space-between
+		font-size: 0.75rem
+	.newsletter
+		width: 100%
+		margin-top: 2.0625rem
+		.input
+			display: flex
+			position: relative
+			align-items: center
+			input
+				width: 100%
+				padding: .625rem
+				background-color: #161718
+				border: none
+				color: #fff
+				height: 3.5625rem
+			button
+				height: 100%
+				padding: .625rem
+				background: none
+				color: #fff
+				+pos(abs, 0 0 null null)
+				border: 0
+				height: 3.5625rem
+				width: 3.5625rem
+				font-size: 1.5rem
+	.hotline
+		margin-top: 2rem
+		.title
+			margin-bottom: 1rem
+			h4
+				max-width: 25.3125rem
+				+fz(1.2rem)
+				+fw(400)
+		.button
+			a
+				display: inline-flex
+				.button-main
+					padding: 1.5625rem
+					font-size: 1.125rem
+					display: flex
+					justify-content: center
+					align-items: center
+					color: #1e1f21
+					background: #fff
+				.button-circle
+					height: 100%
+					position: relative
+					&:before
+						content: ''
+						width: 80%
+						background: #fff
+						height: 80%
+						+bor-rad(50%)
+						+pos(abs, 50% null null 50%)
+						transform: translate(-50%,-50%) scale(0.2)
+						+tran(.5s)
+					&:after
+						content: ''
+						width: 80%
+						height: 80%
+						background: #000
+						+bor-rad(50%)
+						+tran(.5s)
+						+pos(abs, 50% null null 50%)
+						transform: translate(-50%,-50%) scale(0)
+				&:hover
+					.button-circle
+						&:before
+							transform: translate(-50%,-50%) scale(1)
+						&:after
+							transform: translate(-50%,-50%) scale(.2)
+	.footer-circle
+		pointer-events: none
+		width: calc(100vh - 15.75rem)
+		+pos(abs, 9rem null null 0)
+		border-radius: 50%
+		&:before
+			content: ""
+			display: block
+			padding-bottom: 100%
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			border-radius: 50%
+			border: 1px solid #b6b8b9
+			opacity: .5
+	+media-breakpoint-down(md)
+		.container
+			+pad(null 15px)
+		.footer-circle
+			display: none
+	+media-breakpoint-up(sm)
+		.newsletter
+			.input
+				max-width: 350px
+				input
+	+media-breakpoint-up(lg)
+		+pad(0)
+		height: 100vh
+		.top-nav
+			height: 9rem
+			display: flex
+			justify-content: space-between
+			align-items: center
+		.last-nav
+			padding-right: 20px
+			margin-bottom: 0
+			a
+				+fz(.5875rem)
+		.bottom-nav
+			+pad(null 2rem)
+		.first-nav
+			ul
+				display: flex
+				align-items: center
+				li
+					a
+						+pad(null 1.2vw)
+						+fz(1rem)
+		.main-nav
+			+flex-center()
+			height: calc(100vh - 13.5rem)
+		.content
+			width: 100%
+			display: flex
+		.lg1-2
+			display: flex
+			flex: 0 0 50%
+			+pad(null .5rem)
+			align-items: center
+			justify-content: center
+			flex-wrap: wrap
+			position: relative
+			justify-content: flex-start
+			height: 100%
+		.nav-list-active
+			margin-top: 0
+		.title
+			h5
+				+fz(.9375rem)
+				text-transform: uppercase
+				letter-spacing: .15em
+				margin-bottom: .9375rem
+			ul
+				li
+					a
+						+fz(1.125rem)
+						+lh(1.75)
+		.hotline
+			.title
+				margin-bottom: 2.5rem
+				h4
+					+fz(1.5625rem)
+					+lh(1.4)

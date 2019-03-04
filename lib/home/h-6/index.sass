@@ -1,0 +1,67 @@
+.dh-home-6
+	padding-bottom: 2.5rem
+	.wrapper
+		position: relative
+		z-index: 58
+	img
+		width: 100%
+	.item
+		a
+			display: block
+			text-decoration: none
+			color: #1e1f21
+			figure
+				text-align: center
+				.img
+					background: #000
+					overflow: hidden
+					img
+						+tran(.5s)
+				figcaption
+					padding-top: 1.5rem
+					.small
+						margin-bottom: .875rem
+						span
+							text-transform: uppercase
+							letter-spacing: .15em
+							+fz(.75rem)
+							+fw(700)
+					.title
+						max-width: 19.375rem
+						+mar(null auto)
+						p
+							+fz(1.25rem)
+							+lh(1.4)
+					.time
+						margin-top: 1.375rem
+						span
+							+fw(700)
+							+fz(.75rem)
+							letter-spacing: .15em
+		+ .item
+			margin-top: 2rem
+	.button
+		margin-top: 2rem
+		text-align: center
+		a
+			color: #1e1f21
+			display: inline-block
+			background: #fff
+			+pad(1.5625rem)
+			+tran(.5s)
+			+fz(1.125rem)
+			text-decoration: none
+			&:hover
+				background: #e6e6e6
+	+media-breakpoint-up(lg)
+		.item
+			+pad(null 3rem)
+			+ .item
+				margin: 0
+			a
+				&:hover
+					.img
+						img
+							opacity: .75
+							transform: scale(1.05)
+	

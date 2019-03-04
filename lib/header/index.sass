@@ -1,0 +1,385 @@
+
+.dh-header
+	+pos(abs, 0 null null 0)
+	width: 100%
+	z-index: 90
+	.container
+		+pad(0)
+	&.onScroll
+		.main-wrapper
+			+pos(fixed, 0 null null 0)
+			width: 100%
+			margin-top: 0
+			transition: margin .5s ease-in-out
+			// transition-delay: .2s
+		.top-wrapper
+			// transition-delay: .2s
+			top: r(-36px)
+		.nav-wrapper
+			transform: translateY(-9rem)
+	&.inPage
+		.main-wrapper
+			.toggle-button
+				.button
+					background: #1e1f21
+					+tran(.3s)
+					transition-delay: 0s
+					&:after
+						background: #1e1f21
+						transition-delay: 0s
+						+tran(.3s)
+					&:before
+						background: #1e1f21
+						transition-delay: 0s
+						+tran(.3s)
+	&.active
+		.top-wrapper
+			transition-delay: .2s
+			top: r(-36px)
+		.main-wrapper
+			// transform: translateY(0)!important
+			+pos(fixed, 0 null null 0)
+			width: 100%
+			margin-top: 0
+			transition-delay: .2s
+			.toggle-button
+				.button
+					&:after
+						background: #fff
+						transition-delay: 0s
+						+tran(.3s)
+					&:before
+						background: #fff
+						transition-delay: 0s
+						+tran(.3s)
+		.nav-wrapper
+			display: none
+		.header-wrapper
+			bottom: 0
+		
+	.top-wrapper
+		height: r(36px)
+		background: #f68121
+		margin-bottom: 0
+		+flex-center()
+		+pos(abs, 0 null null 0)
+		width: 100%
+		+pad(null 1rem)
+		z-index: 33
+		+tran(.5s)
+		p
+			text-align: center
+			+fz(.5rem)
+			letter-spacing: .1rem
+			+fw(600)
+			color: #fff
+		+media-breakpoint-up(lg)
+			p
+				+fz(.75rem)
+	.main-wrapper
+		position: relative
+		z-index: 88
+		display: flex
+		+tran(.5s)
+		pointer-events: none
+		justify-content: space-between
+		margin-top: r(36px)
+		.dh-logo
+			pointer-events: all
+			img
+				width: 9rem
+				height: 9rem
+		.toggle-button
+			width: 9rem
+			pointer-events: all
+			height: 9rem
+			cursor: pointer
+			+flex-center()
+			.button
+				height: 1px
+				width: 35px
+				background: #1e1f20
+				position: relative
+				transition: all 0ms .2s
+				&:after
+					content: ""
+					position: absolute
+					left: 0
+					width: 100%
+					height: 100%
+					bottom: 8px
+					background: #1e1f20
+					transition: bottom .2s .2s cubic-bezier(0.23, 1, 0.32, 1), transform .2s cubic-bezier(0.23, 1, 0.32, 1)
+				&:before
+					content: ""
+					position: absolute
+					left: 0
+					width: 100%
+					height: 100%
+					top: 8px
+					background: #1e1f20
+					transition: bottom .2s .2s cubic-bezier(0.23, 1, 0.32, 1), transform .2s cubic-bezier(0.23, 1, 0.32, 1)
+			&.active
+				.button
+					background: transparent
+					&:before
+						top: 0
+						transform: rotate(45deg)
+						transition: top .2s cubic-bezier(0.23, 1, 0.32, 1), transform .2s .2s cubic-bezier(0.23, 1, 0.32, 1)
+					&:after
+						bottom: 0
+						transform: rotate(-45deg)
+						transition: bottom .2s cubic-bezier(0.23, 1, 0.32, 1), transform .2s .2s cubic-bezier(0.23, 1, 0.32, 1)
+	.nav-wrapper
+		+pos(abs, r(36px) 9rem null 9rem)
+		+tran(.75s)
+		z-index: 90
+		height: 9rem
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		ul
+			display: flex
+			padding-left: 0
+			list-style: none
+			li
+				a
+					display: inline-block
+					+pad(null 1.2vw)
+					text-decoration: none
+					color: #1e1f20
+					+fz(1.125rem)
+	.last-nav, .nav-list
+		+pad(10px 2rem 6px null)
+		display: flex
+		align-items: center
+		.language, .user
+			+pad(1.2vw)
+			+flex-center()
+			a
+				color: #fff
+				text-transform: uppercase
+				+fz(.6875rem)
+	.nav-list
+		img
+			filter: brightness(0) invert(1)
+	.last-nav
+		img
+		.language, .user
+			a
+				color: #1e1f20
+	.top-nav
+		height: 9rem
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.title
+			margin-left: 4.5rem
+			p
+				+lh(1.57143)
+				letter-spacing: .15em
+				+fz(1rem)
+				text-transform: uppercase
+	.header-wrapper
+		background: #3a3c44
+		+pos(fixed,  null null 100% 0)
+		height: 100%
+		color: #fff
+		width: 100%
+	.main-nav
+		display: flex
+		flex-wrap: wrap
+		height: calc(100vh - 13.5rem)
+		.lg1-2
+			flex: 0 0 100%
+		+media-breakpoint-up(lg)
+			.lg1-2
+				display: flex
+				flex: 0 0 50%
+				+pad(null .5rem)
+				align-items: center
+				justify-content: center
+				flex-wrap: wrap
+				position: relative
+				justify-content: flex-start
+				height: 100%
+				&:nth-child(2)
+					overflow: auto
+	.nav-list-active
+		+pad(2.8125rem null 4.375rem)
+		position: relative
+		&:after
+			content: ''
+			width: 20px
+			height: 1px
+			background: #ffffff
+			+pos(abs, 0 null null 0)
+		&:before
+			content: ''
+			width: 20px
+			height: 1px
+			background: #ffffff
+			+pos(abs, null null 0 0)
+		.title
+			h5
+				+fw(400)
+				text-transform: uppercase
+				letter-spacing: .15em
+				+fz(.9375rem)
+				margin-bottom: .9375rem
+		ul
+			list-style: none
+			padding-left: 0
+			li
+				a
+					+lh(1.75)
+					color: #ffffff
+					+fz(1.125rem)
+					display: inline-block
+					text-decoration: none
+					&:after
+						content: ''
+						position: absolute
+						left: 0
+						bottom: 0px
+						height: 2px
+						width: 100%
+						background: #fff
+						transform: scaleX(0)
+						transform-origin: center right
+						transition: transform .45s cubic-bezier(.4,0,0,1)
+					&:hover, &.active
+						&:after
+							transform: scaleX(1)
+							transition: transform .45s cubic-bezier(.4,0,0,1)
+							transform-origin: center left
+	.main-nav-active
+		ul
+			list-style: none
+			padding-left: 0
+			li
+				a
+					display: inline-block
+					position: relative
+					color: #fff
+					line-height: 1
+					margin-bottom: .9375rem
+					font-size: 3.75rem
+					text-decoration: none
+					&:after
+						content: ''
+						position: absolute
+						left: 0
+						bottom: -2px
+						height: 3px
+						width: 100%
+						background: #fff
+						transform: scaleX(0)
+						transform-origin: center right
+						transition: transform .45s cubic-bezier(.4,0,0,1)
+					&:hover, &.active
+						&:after
+							transform: scaleX(1)
+							transition: transform .45s cubic-bezier(.4,0,0,1)
+							transform-origin: center left
+
+	.nav-text
+		p
+			a
+				text-decoration: underline
+				color: #fff
+	.footer-nav
+		display: flex
+		align-items: center
+		height: 4.5rem
+		justify-content: space-between
+		+pad(null 2rem)
+		+fz(.75rem)
+	.nav-circle
+		height: 650px
+		width: 650px
+		pointer-events: none
+		transform: translateX(-50%)
+		position: absolute
+		border: 1px solid rgba(255, 255, 255, 0.5)
+		border-radius: 50%
+		left: 5rem
+		display: none
+		+media-breakpoint-up(md)
+			display: block
+	+media-breakpoint-down(sm)
+		.top-nav
+			+mar(0 6.5rem 0 6.5rem)
+			.title
+				margin-left: 0
+		.nav-list
+			.language, .user
+				a
+					+fz(0.9rem)
+	+media-breakpoint-down(md)
+		.main-wrapper
+			.dh-logo
+				img
+					width: 6.5rem
+					height: 6.5rem
+			.toggle-button
+				width: 6.5rem
+				height: 6.5rem
+		.nav-wrapper
+			display: none
+		.top-nav
+			height: 6.5rem
+			+pad(null .5rem)
+		.main-nav
+			+pad(null 1rem)
+			height: calc(100vh - 11rem)
+		.main-nav-active
+			padding-top: 2rem
+			ul
+				margin-bottom: 2rem
+				li
+					a
+						+fz(1.75rem)
+//  Animate
+.dh-header
+	&.active
+		.nav-text
+			transition-delay: .7s
+		.footer-nav
+			p
+				&:first-child
+					transition-delay: .65s
+				&:last-child
+					transition-delay: .7s
+		.top-nav
+			.title
+				transition-delay: .2s
+		.nav-list
+			transition-delay: .25s
+		.nav-text, .nav-list, .top-nav .title, .nav-list-active li, .main-nav-active li, .footer-nav p
+			+animateActive()
+	.nav-list, .nav-list-active li, .main-nav-active li, .nav-text, .top-nav .title, .footer-nav p
+		+animate()
+.homepage
+	.dh-header .nav-wrapper ul li a
+		color: #fff
+	.dh-header .last-nav
+		a
+			color: #ffffff
+		img
+			filter: brightness(0) invert(1)
+	.dh-header .main-wrapper .toggle-button.active .button, .dh-header.inPage .main-wrapper .toggle-button.active .button
+		background: transparent
+	.dh-header .main-wrapper .toggle-button .button
+		background: #ffffff
+		&:after
+			background: #ffffff
+		&:before
+			background: #ffffff
+	.dh-header.inPage .main-wrapper .toggle-button .button
+		background: #1e1f21
+		&:after
+			background: #1e1f21
+		&:before
+			background: #1e1f21
+	.dh-header.inPage

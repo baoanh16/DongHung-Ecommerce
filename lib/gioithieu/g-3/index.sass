@@ -1,0 +1,59 @@
+.dh-gioithieu-3
+    margin-top: r(40px)
+    .dh-wrapper
+        +pad(r(40px))
+        background: #fff
+    h3
+        margin-bottom: r(25px)
+        +fz(r(24px))
+        text-transform: uppercase
+        letter-spacing: 2px
+        +pad(r(25px) null)
+        padding-top: 0
+        position: relative
+        &:after
+            content: ''
+            width: 100%
+            background: #d6d6d6
+            +pos(abs, null null 0 0)
+            max-width: 90px
+            height: 1px
+    .text
+        p
+            margin-bottom: 1rem
+    ul
+        list-style: none
+        padding-left: 0
+        li
+            text-align: center
+        h5
+            +fz(r(24px))
+        p
+            +fz(r(14px))
+            color: #666666
+    +media-breakpoint-up(lg)
+        ul
+            display: flex
+            position: relative
+            &:before
+                content: ''
+                height: 12px
+                width: 80%
+                +pos(abs, 12px null null 0)
+                background: #f6f6f6
+            li
+                position: relative
+                z-index: 22
+                flex-grow: 1
+                text-align: left
+                flex-basis: 0
+                h5
+                    display: inline
+                    +lh(36px)
+                    +pad(null r(6px))
+                    background: #fff
+                p
+                    +pad(null r(4px))
+                &:first-child
+                    h5
+                        padding-left: 0

@@ -1,0 +1,38 @@
+.dh-bosuutap
+    position: relative
+    z-index: 61
+    .item
+        background: #fff
+        margin-bottom: r(40px)
+        h5
+            +fz(r(24px))
+            text-transform: uppercase
+            letter-spacing: 2px
+            +pad(r(25px) null)
+            padding-top: 0
+            position: relative
+            &:after
+                content: ''
+                width: 100%
+                background: #d6d6d6
+                +pos(abs, null null 0 0)
+                max-width: 90px
+                height: 1px
+        p
+            padding-top: r(25px)
+        .img
+            padding-top: 2rem
+    +media-breakpoint-up(xl)
+        .item
+            h5
+                padding-top: r(25px)
+            .img
+                padding-top: 0
+            &:nth-child(even)
+                .img
+                    order: 1
+                .content
+                    order: 2
+    +media-breakpoint-up(lg)
+        .item
+            +pad(r(50px) r(40px))

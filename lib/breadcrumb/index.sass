@@ -1,0 +1,51 @@
+.dh-breadcrumb
+    position: relative
+    z-index: 61
+    .container
+        +pad(0)
+    .breadcrumb-banner
+        position: relative
+        min-height: 200px
+    .img
+    .title
+        +pad(null r(40px))
+        h2
+            color: #fff
+            +fz(1.5rem)
+            +fw(400)
+        +pos(abs, 50% null null 0)
+        transform: translateY(-50%)
+    .main-breadcrumb
+        +pos(abs, null null r(15px) 0)
+        +pad(null r(40px))
+        ol
+            margin-bottom: 0
+            list-style: none
+            padding-left: 0
+            display: flex
+            &:before
+                padding-right: r(20px)
+                content: '-'
+                color: #fff
+            a
+                color: #fff
+            li
+                + li
+                    &:before
+                        content: '/'
+                        color: #fff
+                        +pad(null r(7.5px))
+    +media-breakpoint-up(lg)
+        .breadcrumb-banner
+            min-height: 300px
+        .title
+            h2
+                +lh(1.2)
+                +fz(r(40px))
+    +breakpoint-up(1500px)
+        .breadcrumb-banner
+            min-height: 400px
+        .title
+            h2
+                +lh(1.2)
+                +fz(r(60px))

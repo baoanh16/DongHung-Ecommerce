@@ -1,0 +1,51 @@
+.dh-gioithieu-2
+    .dh-wrapper
+        +pad(r(40px))
+        background: #fff
+    h3
+        +fz(r(24px))
+        text-transform: uppercase
+        letter-spacing: 2px
+        +pad(r(25px) null)
+        padding-top: 0
+        position: relative
+        &:after
+            content: ''
+            width: 100%
+            background: #d6d6d6
+            +pos(abs, null null 0 0)
+            max-width: 90px
+            height: 1px
+    .list-item
+        padding-top: r(40px)
+        .item
+            + .item
+                margin-top: r(40px)
+        figure
+            .icon
+                text-align: center
+            figcaption
+                text-align: center
+                padding-top: r(20px)
+                h5
+                    +fz(r(16px))
+                p
+                    padding-top: r(15px)
+                    +fz(r(14px))
+    +media-breakpoint-up(lg)
+        .list-item
+            .item
+                + .item
+                    margin-top: 0
+            figure
+                .icon
+                    height: 80px
+                    display: flex
+                    align-items: flex-end
+                figcaption
+                    text-align: left
+    +media-breakpoint-up(xl)
+        .list-item
+            +mar(null -20px)
+            .item
+                +pad(null 20px)

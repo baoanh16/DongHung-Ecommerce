@@ -1,0 +1,46 @@
+.dh-home-5
+	+pad(8.125rem null)
+	.wrapper
+		position: relative
+		z-index: 57
+	.dh-circle
+		+pos(abs, 50% 9rem null 9rem)
+		height: 100%
+		transform: translateY(-50%)
+		width: calc(100% - 18rem)
+		+bor-rad(50%)
+		border: 1px solid #b6b8b9
+		@media (max-width: 992px)
+			display: none
+	.swiper-slide
+		text-align: center
+		opacity: .2
+		+tran(.5s)
+		&.swiper-slide-active
+			opacity: 1
+	.heading
+		.small
+			+fz(.75rem)
+			+fw(700)
+			text-transform: uppercase
+			letter-spacing: .15em
+		.title
+			+mar(1rem null)
+			h3
+				+fz(1.5rem)
+				+lh(1.16)
+				+fw(400)
+	.info
+		display: inline-block
+		+mar(null 3rem)
+		width: 50%
+		max-width: 13rem
+		margin-top: 1.5rem
+		span
+			+fz(13px)
+			display: block
+			padding-bottom: 4px
+			border-bottom: 1px solid #d3d3d7
+		p
+			margin-top: .625rem
+			+fw(700)

@@ -1,0 +1,63 @@
+html, body
+	font-size: 15px
+	background: #fff
+	margin: 0
+	font-family: 'Bai Jamjuree', sans-serif
+	font-weight: 400
+	color: #1e1f21
+	background: #f6f6f6
+	overflow: hidden
+	height: 100%
+	@media (max-width: 699px)
+		font-size: 12px
+	@media (max-width: 999px) and (min-width: 700px)
+		font-size: 13px
+	@media (max-width: 1199px) and (min-width: 1000px)
+		font-size: 14px
+	@media (max-width: 1599px) and (min-width: 1200px)
+		+fz(16px)
+	.scroll-Animate
+		position: relative
+		height: 100%
+*::selection
+	background: #abcfc1
+	color: #fff
+img
+	max-width: 100%
+p, h1, h2, h3, h4, h5, ul, figure
+	margin-bottom: 0
+.dh-container
+	&.no-gutters
+		+pad(0)
+	+pad(null 15px)
+	height: 100%
+	+media-breakpoint-up(md)
+		+pad(0)
+		max-width: 100%
+		width: calc(100% - 13rem)
+		+mar(null 6.5rem)
+	+media-breakpoint-up(lg)
+		width: calc(100% - 18rem)
+		+mar(null 9rem)
+main
+	padding-top: 8.75rem
+	+media-breakpoint-up(lg)
+		padding-top: 11.25rem
+.homepage
+	main
+		padding-top: 0
+.viewAll
+	a
+		background: #fff
+		+mar(null auto)
+		width: r(60px)
+		height: r(60px)
+		+bor-rad(50%)
+		+flex-center()
+		+fz(r(24px))
+		color: #1e1f20
+		border: 1px solid #d6d6d6
+	&.active
+		a
+			em
+				transform: rotate(180deg)

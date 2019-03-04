@@ -1,0 +1,46 @@
+.dh-tintuc-ds
+    position: relative
+    z-index: 60
+    +pad(r(50px) null)
+    .item
+        margin-bottom: r(70px)
+        a
+            text-decoration: none
+            color: #1e1f20
+            display: block
+            &:hover
+                .img
+                    img
+                        opacity: .5
+                        transform: scale(1.05)
+        .img
+            overflow: hidden
+            background: #000
+            img
+                +tran(.5s)
+                width: 100%
+        figcaption
+            +pad(null 1rem)
+            text-align: center
+        .title
+            +pad(r(25px) null)
+            h5
+                +fw(400)
+                +fz(r(20px))
+                display: -webkit-box
+                -webkit-line-clamp: 3
+                -webkit-box-orient: vertical
+                overflow: hidden
+                text-overflow: ellipsis
+        .time
+            p 
+                +fz(r(12px))
+                +fw(700)
+    +media-breakpoint-up(lg)
+        .item
+            +pad(null r(40px))
+            &:nth-child(even)
+                transform: translateY(50%)
+    +media-breakpoint-up(xl)
+        .item
+            +pad(null r(70px))

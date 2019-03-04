@@ -1,0 +1,14 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = ''
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/breadcrumb/index.pug
+	include ../lib/bosuutap/nav/index.pug
+	include ../lib/bosuutap/list/index.pug
+block footer
+	include ../lib/footer/index.pug

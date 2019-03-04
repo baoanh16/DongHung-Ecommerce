@@ -1,0 +1,53 @@
+.dh-nav
+    position: relative
+    z-index: 60
+    .mobileNav
+        +pad(.75rem 1rem)
+        background: #1e1f215c
+        display: flex
+        align-items: center
+        color: #fff
+        justify-content: space-between
+        +fw(400)
+        &:after
+            +mdi('\f140')
+    ul
+        display: none
+        overflow: hidden
+        list-style: none
+        padding-left: 0
+        background: #e6e6e6
+        // display: flex
+        // align-items: center
+        +pad(null 1rem)
+        a
+            +fz(r(18px))
+            text-decoration: none
+            color: #1e1f21
+            display: block
+            +lh(2rem)
+    +media-breakpoint-up(md)
+        .mobileNav
+            display: none
+        ul
+            justify-content: center
+            +pad(r(30px) null)
+            display: flex!important
+            position: relative
+            &:after
+                content: ''
+                width: 100%
+                height: 1px
+                background: #cecece
+                +pos(abs, null null r(30px) 0 )
+            li
+                position: relative
+                &.active, &:hover
+                    &:after
+                        content: ''
+                        width: 100%
+                        height: 2px
+                        background: #000
+                        +pos(abs, 100% null null 0 )
+                a
+                    +pad(null r(20px))

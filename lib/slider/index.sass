@@ -1,0 +1,246 @@
+.dh-slider
+	z-index: 0
+	position: relative
+	.item, .background
+		+flex-center()
+		position: relative
+		width: 100%
+		height: 100vh
+		object-fit: cover
+		+pos(abs, 0 null null 0)
+		align-items: flex-start
+	.item
+		&:after
+			content: ''
+			width: 100%
+			height: 100%
+			background: rgba(#3a3c44,.4)
+			+pos(abs, 0 null null 0)
+	.swiper-slide
+		padding-top: 11.25rem
+		height: 100vh
+		&:not(.swiper-slide-active)
+			.background
+				transform: scale(1.4) rotate(20deg)
+				transition: transform .6s cubic-bezier(.55,.085,.68,.53),opacity .6s cubic-bezier(.55,.085,.68,.53)
+				transition-delay: 0s,.9s
+				opacity: 0
+				.background-center
+					transform: scale(1.2) rotate(-20deg)
+					backface-visibility: hidden
+					transition: transform .6s cubic-bezier(.55,.085,.68,.53),opacity .3s cubic-bezier(.55,.085,.68,.53)
+					transition-delay: 0s,.9s
+				
+		&.swiper-slide-active
+			.background
+				transform: scale(1) rotate(0)
+				opacity: 1
+				transition-duration: 1.2s
+				transition-delay: .45s
+				transition-timing-function: cubic-bezier(.23,1,.32,1)
+				.background-center
+					transform: scale(1) rotate(0deg)
+					opacity: 1
+					transition-duration: 1.2s
+					transition-delay: .45s
+					transition-timing-function: cubic-bezier(.23,1,.32,1)
+					backface-visibility: hidden
+					transition: transform .6s cubic-bezier(.55,.085,.68,.53),opacity .3s cubic-bezier(.55,.085,.68,.53)
+					transition-delay: 0s,.9s
+			.text
+				h2
+					transform: translateX(0)
+					opacity: 1
+					&:before
+							opacity: 1
+							transform: translateX(-50%)
+				p
+					opacity: 1
+	.middle, .content
+		width: 100%
+		+mar(null 9rem)
+		height: calc(100% - 15.75rem)
+		margin-top: 11.25rem
+		// overflow: hidden
+		position: relative
+		z-index: 22
+	.content
+		display: flex
+	//     +mar(null 9rem)
+	//     width: calc(100% - 18rem)
+	//     height: calc(100vh - 18rem)
+	//     +pos(abs, 50% 0 null null)
+	//     z-index: 33
+	//     transform: translateY(-50%)
+	.background-center
+		// opacity: .4
+		+pos(abs, -11.25rem -9rem -9rem -9rem)
+		width: calc(100% + 18rem)
+		height: calc(100% + 18rem)
+	.medium1-2
+		flex-grow: 1
+		flex-basis: 0
+		+flex-center()
+		flex-wrap: wrap
+		position: relative
+		justify-content: flex-start
+		height: 100%
+	.circle
+		border: 1px solid hsla(0,0%,100%,.5)
+		+bor-rad(50%)
+		height: 100%
+		transform: translateY(-50%)
+		+pos(abs,50% 50% null null)
+	.text
+		margin-left: .3125rem
+		color: #fff
+		h2
+			+fz(3.75rem)
+			transform: translateX(100%)
+			opacity: 0
+			+tran(.8s)
+			+fw(400)
+			+lh(4rem)
+			&:before
+				content: '“'
+				top: -1rem
+				left: -3.5rem
+				font-size: 8.4375rem
+				position: absolute
+				color: #fff
+				-moz-text-fill-color: transparent
+				-webkit-text-fill-color: transparent
+				-moz-text-stroke-color: #fff
+				-webkit-text-stroke-color: #fff
+				-moz-text-stroke-width: 1px
+				-webkit-text-stroke-width: 1px
+				opacity: 0
+				transform: translateX(100%)
+				transition: opacity .6s cubic-bezier(.4,0,0,1),transform .6s cubic-bezier(.4,0,0,1)
+		p
+			opacity: 0
+			transition: opacity .45s cubic-bezier(.4,0,0,1)
+			+fz(.9375rem)
+			transition-delay: .3s
+			margin-top: 2rem
+			+fw(400)
+			&:before
+				content: '-'
+				display: inline-block
+				margin-right: 2rem
+	.swiper-pagination-progressbar
+		height: 2px
+		width: 100%
+		top: 11.25rem
+		background: none
+		.swiper-pagination-progressbar-fill
+			background: #fff
+	.button
+		width: 100%
+		text-align: left
+		+tran(0)
+		a, span
+			display: inline-flex
+			height: 100%
+		+pos(abs, null null 0 0)
+		.button-main
+			background: #fff
+			padding: 1.5625rem
+			color: #1e1f21
+			height: 4.6875rem
+			+fz(1.125rem)
+			@media (max-width: 992px)
+				display: flex
+				justify-content: center
+				align-items: center
+		.button-circle
+			height: 108px
+			width: 108px
+			position: relative
+			color: #000
+			&:before
+				content: ''
+				height: 80%
+				width: 80%
+				+bor-rad(50%)
+				background: #fff
+				+pos(abs, 50% null null 50%)
+				+tran(.2s)
+				transform: translate(-50%, -50%) scale(.2)
+			&:after
+				content: ''
+				height: 10px
+				width: 10px
+				+bor-rad(50%)
+				background: #000
+				+pos(abs, 50% null null 50%)
+				transition-delay: .1s
+				transform: translate(-50%, -50%) scale(0)
+		a
+			text-decoration: none
+			&:hover
+				.button-main
+					opacity: .9
+				.button-circle
+					&:before
+						transform: translate(-50%, -50%) scale(1)
+					&:after
+						transform: translate(-50%, -50%) scale(1)
+						transition-delay: .2s
+				
+	+media-breakpoint-down(xl)
+		.content
+			.text
+				h2
+					&:before
+						left: -4.5rem
+		.button
+			.button-circle
+				width: 87px
+				height: 87px
+	+media-breakpoint-down(md)
+		.content
+			.medium1-2
+				justify-content: center
+				&:first-child
+					display: none
+			.text
+				text-align: center
+				h2
+					+fz(3rem)
+			.button
+				text-align: center
+		.middle, .content
+			width: 100%
+			+mar(null 2rem)
+		.swiper-slide
+			height: 600px
+		.item, .background
+			height: 100%
+		.swiper-pagination-progressbar
+			top: 8.75rem
+		.button
+			position: relative
+			.button-main
+				+pad(r(15px))
+			.button-circle
+				height: 57px
+				width: 57px
+	+media-breakpoint-down(sm)
+		.content
+			.text
+				h2
+					+fz(r(30px))
+					+lh(r(35px))
+					&:before
+						left: 50%
+				p
+					margin-top: 1rem
+		.medium1-2
+			flex-direction: column
+		.button
+			margin-top: 2rem
+			.button-main
+				+flex-center()
+		.swiper-slide
+			height: 520px

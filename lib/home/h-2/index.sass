@@ -1,0 +1,64 @@
+.dh-home-2
+	.swiper-top
+		position: relative
+		z-index: 60
+		background: #dddde1
+		.item
+			user-select: none
+			cursor: pointer
+			.heading, .label
+				+pad(.75rem 1rem)
+			.label
+				+fw(600)
+				padding-bottom: 1.3rem
+			.heading
+				overflow: hidden
+				position: relative
+				&:after
+					content: ''
+					width: 100%
+					height: 2px
+					background: #000000
+					+pos(abs, null 100% 0 null )
+					+tran(.5s)
+			&.active
+				.heading
+					&:after
+						right: 0
+			+fz(.9rem)
+	.swiper-bottom
+		position: relative
+		z-index: 60
+		padding: 3rem 0
+		background: #fff
+		.item
+			.content
+				+pad(null 1rem)
+				h3
+					text-transform: uppercase
+					+fz(1.125rem)
+					+fw(700)
+					letter-spacing: .15em
+					margin-bottom: 1rem
+			.img
+				margin-top: 1rem
+	+media-breakpoint-up(lg)
+		.swiper-top
+			.item
+				.heading, .label
+					+pad(null r(40px))
+				.label
+					padding-bottom: 1rem
+		.swiper-bottom
+			.item
+				display: flex
+				align-items: center
+				.img
+					margin-top: 0
+	+media-breakpoint-up(xl)
+		.swiper-bottom
+			.item
+				.content
+					padding-left: 3rem
+				.img
+					padding-left: 4.5rem
