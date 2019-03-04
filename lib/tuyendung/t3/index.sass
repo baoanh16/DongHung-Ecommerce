@@ -1,0 +1,71 @@
+.dh-gioithieu-3
+	margin-top: r(40px)
+	margin-bottom: 6.25rem
+	.table-wrapper
+		background: #ffffff
+		+fz(r(15px))
+		margin-top: r(20px)
+		table
+			border: 1px solid #d2d5e4
+			display: table
+			width: 100%
+			overflow-x: auto
+			tr
+				border-bottom: 1px solid #d2d5e4
+				color: #1e1f20
+				th, td
+					+pad(.5rem)
+					text-align: center
+					&:first-child
+						padding-left: 1.5rem
+						text-align: left
+					+fz(r(15px))
+					a
+						text-decoration: none
+						color: #333
+					.new
+						display: none
+				td 
+					color: #a7a7a7
+			thead
+				tr
+					border-top: 8px solid #d2d5e4
+					th
+						+fw(600)
+						white-space: nowrap
+						&:first-child 
+							color: #1e1f20
+	+media-breakpoint-up(md)
+		.table-wrapper
+			padding: 2.5rem
+			table
+				display: table
+				width: 100%
+				tr
+					td, th
+						+pad(.6rem null)
+						&:first-child
+							padding-left: 2rem
+							white-space: nowrap
+						&:last-child 
+							width: 20%
+							text-align: left
+				tbody
+					tr
+						cursor: pointer
+						transition: .4s all ease-in-out
+						td
+							&:first-child
+								display: flex
+								justify-content: space-between
+								align-items: center
+							
+							position: relative
+						&:nth-child(odd)
+							background: #fff
+						&:hover
+							background: #f8f5ee
+							td
+								&:first-child 
+									a
+										color: #1f2b7a
