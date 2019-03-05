@@ -1,0 +1,31 @@
+.dh-chinhsach
+	padding: r(100px) 0
+	.dh-container
+		background: #fff
+		position: relative
+		z-index: 60
+	.fullContent
+		+fz(r(16px))
+		padding: r(50px) 1rem
+		h3 
+			font-size: 23px 
+			text-transform: uppercase 
+			font-weight: 600
+			position: relative 
+			&:before 
+				content: "" 
+				+pos(abs, null null -7.5px 0) 
+				height: 1px 
+				width: 90px 
+				background: #d6d6d6
+	+media-breakpoint-up(lg)
+		.heading
+			+pad(r(30px))
+			padding-bottom: r(20px)
+		.fullContent,.request 
+			+pad(null r(90px))
+
+	+media-breakpoint-up(xl)
+		.fullContent
+			img
+				+pad(null r(80px))
