@@ -148,5 +148,6 @@ const app = {
 }
 app.ready(function() {
     app.bgImg()
-    app.ie()
+	app.ie()
+	
 })

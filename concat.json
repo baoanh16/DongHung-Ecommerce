@@ -3,7 +3,8 @@
         "./bower_components/swiper/dist/js/swiper.js",
         "./scripts/_mapping.js",
         "./scripts/_mapping-listener.js",
-        "./bower_components/smooth-scrollbar/dist/smooth-scrollbar.js"
+		"./bower_components/smooth-scrollbar/dist/smooth-scrollbar.js",
+		"./bower_components/jquery/dist/jquery.js"
     ],
     "styles": [
         "bower_components/bootstrap/dist/css/bootstrap-grid.css",
