@@ -1,0 +1,43 @@
+.dh-hoidap-list
+	position: relative
+	z-index: 61
+	.item
+		background: #fff
+		padding: 3.125rem 1rem
+		margin-bottom: r(100px) 
+		.title 
+			h2 
+				+fz(r(24px))
+				padding-bottom: 50px
+				position: relative 
+				&:before 
+					content: "" 
+					+pos(abs, null null 25px 0) 
+					height: 1px 
+					width: 90px 
+					background: #d6d6d6
+		.hoidap-item
+			padding-bottom: 25px 
+			margin-bottom: 25px
+			border-bottom: 1px solid #efefef
+			.question 
+				padding-bottom: 25px
+				display: flex
+				justify-content: space-between 
+				align-items: center 
+				h4 
+					+fz(18px) 
+					+fw(400) 
+					color: #1e1f20
+			.conten 
+				p 
+					color: #333333 
+					+fz(r(15px))
+					&:last-child
+						color: #999999 
+					&:first-child 
+						color: #999999
+	+media-breakpoint-up(lg)
+		.item
+			+pad(r(50px) r(40px))
+	+media-breakpoint-up(xl)
