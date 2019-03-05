@@ -1,7 +1,7 @@
 .dh-hoidap-list
 	position: relative
 	z-index: 61
-	.item
+	.main
 		background: #fff
 		padding: 3.125rem 1rem
 		margin-bottom: r(100px) 
@@ -17,7 +17,7 @@
 					width: 90px 
 					background: #d6d6d6
 		.hoidap-item
-			padding-bottom: 25px 
+			cursor: pointer
 			margin-bottom: 25px
 			border-bottom: 1px solid #efefef
 			.question 
@@ -28,8 +28,16 @@
 				h4 
 					+fz(18px) 
 					+fw(400) 
-					color: #1e1f20
+					color: #1e1f20 
+				&.active 
+					h4 
+						color: #1f2b7a 
+						font-weight: 600 
+					i 
+						transform: rotate(180deg)
 			.conten 
+				display: none
+				padding-bottom: 25px 
 				p 
 					color: #333333 
 					+fz(r(15px))
@@ -38,6 +46,6 @@
 					&:first-child 
 						color: #999999
 	+media-breakpoint-up(lg)
-		.item
+		.main
 			+pad(r(50px) r(40px))
 	+media-breakpoint-up(xl)

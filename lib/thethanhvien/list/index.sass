@@ -1,4 +1,4 @@
-.dh-bosuutap
+.dh-thethanhvien-list
 	position: relative
 	z-index: 61
 	.collection-item
@@ -9,8 +9,8 @@
 			+fz(r(24px))
 			text-transform: uppercase
 			letter-spacing: 2px
-			+pad(r(25px) null)
-			padding-top: 0
+			padding-bottom: r(25px) 
+			margin-bottom: r(25px)
 			position: relative
 			&:after
 				content: ''
@@ -19,14 +19,23 @@
 				+pos(abs, null null 0 0)
 				max-width: 90px
 				height: 1px
-		p
-			padding-top: r(25px)
+		.thongso 
+			display: flex 
+			align-items: baseline
+			p 
+				+fz(r(16px)) 
+				color: #999999 
+				span 
+					font-weight: 600
+					color: #333333
+			i 
+				margin-right: r(10px)
 		.img
-			padding-top: 2rem
+			padding-top: 2rem 
+			img 
+				width: 100%
 	+media-breakpoint-up(xl)
 		.collection-item
-			h5
-				padding-top: r(25px)
 			.img
 				padding-top: 0
 			&:nth-child(even)
