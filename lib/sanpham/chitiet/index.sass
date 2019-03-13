@@ -1,0 +1,186 @@
+.dh-product-detail
+	.dh-container
+		background: #fff
+	.thumbnail
+		width: 100%
+		position: relative
+		&:before
+			display: block
+			content: ''
+			padding-top: 100%
+		img
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			max-width: 100%
+	.thumbnail-big-wrapper
+		.swiper-zoom-container
+			cursor: zoom-in
+		.swiper-slide-zoomed
+			.swiper-zoom-container
+				cursor: grabbing
+	.thumbnail-small-wrapper
+		padding: 0 9% 65px
+		.swiper-container
+			padding: 13px
+		.thumbnail
+			border: 1px solid #d6d6d6
+		.swiper-slide-thumb-active
+			.thumbnail
+				box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.42)
+	.info-wrapper
+		border-top: inset 8px #d2d5e4
+		&._gray
+			border-top: inset 8px #d2d5e4
+		&._green
+			border-top: inset 8px #abcec1
+		&._yellow
+			border-top: inset 8px #d8b99f
+		.title
+			padding: 30px
+			border-bottom: 1px solid #d6d6d6
+			h1
+				font-weight: 500
+				font-size: 2.25rem
+				color: #1e1f20
+				line-height: 28px
+			.subtitle
+				font-size: 24px
+				color: #666666
+		.price
+			padding: 30px
+			border-bottom: 1px solid #d6d6d6
+			span
+				color: #1f2b7a
+				font-size: 1.875rem
+		.detail-wrapper
+			padding: 21px 30px
+			p,.color-wrapper,.size-wrapper
+				span:first-child
+					color: #666666
+				span:last-child
+					color: #1e1f20
+			.color-list
+				list-style: none
+				margin-top: 17px
+				padding-left: 0
+				li
+					margin-right: 10px
+					display: inline-block
+					.color
+						display: block
+						width: 20px
+						height: 20px
+						border-radius: 50%
+						position: relative
+						background: #86b27e
+						&:after
+							position: absolute
+							content: ''
+							border-radius: 50%
+							border: 1px solid #1e1f20
+							width: 100%
+							height: 100%
+							left: 0
+							top: 0
+							transform: scale(1.25)
+							display: none
+						&.active,&:hover
+							&:after
+								display: block
+			.size-wrapper
+				margin-top: 15px
+				.size-list
+					list-style: none
+					padding-left: 0
+					margin-top: 15px
+					li
+						margin-right: 2px
+						display: inline-block
+						.size
+							width: 30px
+							height: 30px
+							display: flex
+							justify-content: center
+							align-items: center
+							background: #f5f5f5
+							font-size: 14px
+							color: #1e1f20
+							text-decoration: none
+							&.active,&:hover
+								border: 1px solid #1e1f20
+			.addtocart-wrapper
+				margin-top: 20px
+				display: flex
+				height: 70px
+				@media (max-width: 510px)
+					flex-direction: column
+					height: auto
+				.quantity-wrapper
+					display: flex
+					justify-content: center
+					padding: 0 12px
+					flex-direction: column
+					background: #f6f6f6
+					width: 120px
+					span
+						display: block
+						font-size: 0.875rem
+						color: #666666
+					.quantity
+						display: flex
+						margin-top: 7px
+						input
+							width: 100%
+							margin: 0 13px
+							text-align: center
+						.btn-des,.btn-inc
+							font-size: 20px
+							color: #666666
+							cursor: pointer
+					@media (max-width: 510px)
+						padding: 12px
+				.btn-wrapper
+					display: flex
+					margin-left: 10px
+					@media (max-width: 510px)
+						margin-left: 0
+						margin-top: 10px
+				.btn-addtocart-wrapper
+					.btn-addtocart
+						display: block
+						height: 100%
+						display: flex
+						justify-content: center
+						text-align: center
+						padding: 0 2.5rem
+						align-items: center
+						background: #07074e
+						color: #fff
+						font-size: 1.5rem
+						text-decoration: none
+				.btn-addwishlist-wrapper
+					margin-left: 1px
+					position: relative
+					width: 70px
+					&:before
+						content: ''
+						display: block
+						padding-top: 100%
+					.btn-addwishlist
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						background: #f58220
+						display: flex
+						justify-content: center
+						align-items: center
+						font-size: 2.5rem
+						color: white
+						text-decoration: none
+						&:before
+							+lnr('\e813')
