@@ -1,8 +1,26 @@
 .dh-gioithieu-3
 	margin-top: r(40px)
 	margin-bottom: 6.25rem
-	.table-wrapper
+	z-index: 61
+	position: relative
+	.dh-container
 		background: #ffffff
+		padding: 40px
+	h3
+		+fz(r(24px))
+		text-transform: uppercase
+		letter-spacing: 2px
+		+pad(r(25px) null)
+		padding-top: 0
+		position: relative
+		&:after
+			content: ''
+			width: 100%
+			background: #d6d6d6
+			+pos(abs, null null 0 0)
+			max-width: 90px
+			height: 1px
+	.table-wrapper
 		+fz(r(15px))
 		margin-top: r(20px)
 		table
@@ -37,7 +55,6 @@
 							color: #1e1f20
 	+media-breakpoint-up(md)
 		.table-wrapper
-			padding: 2.5rem
 			table
 				display: table
 				width: 100%

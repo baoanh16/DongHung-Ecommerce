@@ -1,0 +1,87 @@
+.dh-phanphoi-1
+	margin-top: 6.25rem
+	.dh-container
+		background: #fff
+		padding: 40px
+		@media (max-width: 576px)
+			padding: 20px
+	h2
+		font-size: 1.5rem
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 30px
+		padding-bottom: 30px
+		position: relative
+		&:after
+			position: absolute
+			bottom: 0
+			left: 0
+			content: ''
+			width: 90px
+			height: 1px
+			background: #d6d6d6
+	ul
+		padding-left: 0
+		list-style: none
+		li
+			line-height: 24px
+			display: flex
+			&:before
+				content: '_'
+				margin-right: 13px
+				margin-top: -6px
+			+ li
+				margin-top: 20px
+	.img
+		text-align: center
+		@media (max-width: 1200px)
+			height: 100%
+			display: flex
+			align-items: center
+		@media (max-width: 992px)
+			margin-top: 30px
+			align-items: flex-start
+			justify-content: 
+	.btn-contact
+		margin-top: 2rem
+		display: inline-block
+		padding: 1.25rem 3.5rem
+		font-size: 1.125rem
+		color: #fff
+		text-decoration: none
+		position: relative
+		z-index: 2
+		transition: all 0.4s
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: -1
+			opacity: 0
+			transition: all 0.4s
+			border-top: 1px solid #07074e
+			border-bottom: 1px solid #07074e
+			transform: scale(0.1, 1)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: -1
+			transition: all 0.4s
+			background-color: #07074e
+		&:hover
+			color: #07074e
+			letter-spacing: 0.1rem
+			transition: all 0.4s
+			&:before
+				opacity: 1
+				transform: scale(1, 1)
+			&:after
+				opacity: 0
+				transform: scale(0.1, 1)

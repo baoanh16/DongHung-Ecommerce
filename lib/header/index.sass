@@ -86,7 +86,7 @@
 		margin-top: r(36px)
 		.dh-logo
 			pointer-events: all
-			img
+			img,svg
 				width: 9rem
 				height: 9rem
 		.toggle-button
@@ -149,6 +149,24 @@
 					text-decoration: none
 					color: #1e1f20
 					+fz(1.125rem)
+					position: relative
+					&:after
+						content: ''
+						position: absolute
+						left: 1.125rem
+						right: 1.125rem
+						bottom: 0px
+						height: 1px
+						background: #1e1f20
+						transform: scaleX(0)
+						transform-origin: center right
+						transition: transform .45s cubic-bezier(.4,0,0,1)
+				&:hover, &.active
+					a
+						&:after
+							transform: scaleX(1)
+							transition: transform .45s cubic-bezier(.4,0,0,1)
+							transform-origin: center left
 	.last-nav, .nav-list
 		+pad(10px 2rem 6px null)
 		display: flex
@@ -160,6 +178,8 @@
 				color: #fff
 				text-transform: uppercase
 				+fz(.6875rem)
+		.welcome-message
+			margin-right: 10px
 	.nav-list
 		img
 			filter: brightness(0) invert(1)
@@ -319,7 +339,7 @@
 	+media-breakpoint-down(md)
 		.main-wrapper
 			.dh-logo
-				img
+				img,svg
 					width: 6.5rem
 					height: 6.5rem
 			.toggle-button

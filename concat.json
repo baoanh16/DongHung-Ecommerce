@@ -1,18 +1,21 @@
 {
-    "scripts": [
-        "./bower_components/swiper/dist/js/swiper.js",
-        "./scripts/_mapping.js",
-        "./scripts/_mapping-listener.js",
+	"scripts": [
+		"./bower_components/swiper/dist/js/swiper.js",
+		"./scripts/_mapping.js",
+		"./scripts/_mapping-listener.js",
 		"./bower_components/smooth-scrollbar/dist/smooth-scrollbar.js",
-		"./bower_components/jquery/dist/jquery.js"
-    ],
-    "styles": [
-        "bower_components/bootstrap/dist/css/bootstrap-grid.css",
-        "bower_components/bootstrap/dist/css/bootstrap-reboot.css",
-        "bower_components/font-awesome/css/all.min.css",
-        "bower_components/swiper/dist/css/swiper.css",
-        "bower_components/mdi/css/materialdesignicons.min.css",
-        "bower_components/linearicons/dist/web-font/style.css",
-        "bower_components/bootstrap/dist/css/bootstrap-grid.css"
-    ]
+		"./bower_components/jquery/dist/jquery.js",
+		"./scripts/jquery.anchorScroll.min.js",
+		"./bower_components/fancybox/dist/jquery.fancybox.min.js"
+	],
+	"styles": [
+		"bower_components/bootstrap/dist/css/bootstrap-grid.css",
+		"bower_components/bootstrap/dist/css/bootstrap-reboot.css",
+		"bower_components/font-awesome/css/all.min.css",
+		"bower_components/swiper/dist/css/swiper.css",
+		"bower_components/mdi/css/materialdesignicons.min.css",
+		"bower_components/linearicons/dist/web-font/style.css",
+		"bower_components/bootstrap/dist/css/bootstrap-grid.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css"
+	]
 }

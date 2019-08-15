@@ -5,6 +5,19 @@
 		+pad(r(40px))
 	label
 		+fz(r(14px))
+	.select-show
+		cursor: pointer
+		+lh(1)
+		+pad(r(10px) r(20px))
+		border: 1px solid #d6d6d6
+		+fw(700)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		&:after
+			+mdi('\f140')
+			+fz(r(24px))
 	.filter-item
 		+ .filter-item
 			margin-top: 1.5rem

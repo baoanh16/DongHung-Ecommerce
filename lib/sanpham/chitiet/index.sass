@@ -1,5 +1,5 @@
 .dh-product-detail
-	.dh-container
+	.product-info
 		background: #fff
 	.thumbnail
 		width: 100%
@@ -15,6 +15,8 @@
 			top: 0
 			bottom: 0
 			max-width: 100%
+			width: 100%
+			height: 100%
 	.thumbnail-big-wrapper
 		.swiper-zoom-container
 			cursor: zoom-in
@@ -45,7 +47,7 @@
 				font-weight: 500
 				font-size: 2.25rem
 				color: #1e1f20
-				line-height: 28px
+				line-height: 2.75rem
 			.subtitle
 				font-size: 24px
 				color: #666666
@@ -184,3 +186,46 @@
 						text-decoration: none
 						&:before
 							+lnr('\e813')
+	.description
+		padding: 30px
+		margin-top: 30px
+		border-top: 1px solid #d6d6d6
+		span
+			font-size: 16px
+			color: #1e1f20
+			text-transform: uppercase
+			font-weight: 700
+			margin-bottom: 26px
+			display: block
+		p
+			font-size: 14px
+			line-height: 22px
+	.related-product
+		margin-top: 40px
+		
+		h2
+			font-size: 1.875rem
+			font-weight: 400
+			color: #1e1f20
+			padding-left: 17px
+			margin-bottom: 22px
+	.related-product-slider
+		position: relative
+		.swiper-prev,.swiper-next
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 60px
+			height: 60px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: #fff
+			border: 1px solid #d6d6d6
+			border-radius: 50%
+			z-index: 62
+			font-size: 24px
+		.swiper-prev
+			left: -5%
+		.swiper-next
+			right: -5%

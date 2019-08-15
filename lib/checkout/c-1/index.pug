@@ -1,0 +1,118 @@
+section.dh-thanhtoan-1
+	.dh-container
+		h1 Giỏ hàng
+		.cart-table
+			table
+				thead
+					tr
+						th &nbsp;
+						th sản phẩm
+						th SIZE
+						th SỐ LƯỢNG
+						th GIÁ TIỀN
+						th TỔNG
+				tbody
+					-for(i=0;i<4;i++)
+						tr
+							td
+								a(href="!#").remove-cart
+									em.mdi.mdi-close-circle
+							td
+								a(href="#").product-cart
+									.product-img
+										img(src="./img/home/product/1a.jpg", alt="")
+									.product-name
+										span BASAS HIGH TOP - CLOUDBURST
+							td(data-title='Size')
+								.product-size
+									span 38
+							td
+								.product-quantity
+									.btn-des -
+									input(type="text", value="0")
+									.btn-inc +
+							td
+								.product-price
+									span 360.000 VNĐ
+								.product-discount
+									span Giảm giá 20%
+							td
+								.product-total
+									span 290,000 VNĐ
+		.summary-row.row
+			.col-sm-6
+				.btn-wrapper
+					a(href="!#").btn-continue 
+						em.lnr.lnr-chevron-left
+						span Tiếp tục mua hàng
+			.col-sm-6
+				.summary-cart
+					.total
+						span Tạm tính
+						span 855,000 đ
+					.total
+						span Giảm giá
+						span 70,000 đ
+					.total.total-price
+						span đơn hàng:
+						span 785,000 đ
+					.note
+						span Giá chưa bao gồm VAT
+					a(href="!#").btn-checkout
+						span Tiến hành thanh toán
+						em.lnr.lnr-chevron-right
+section.dh-viewed-product
+	.dh-container
+		h2 Sản phẩm đã xem
+		.row.no-gutters.list-item
+			.col-lg-4.package
+				.product-item._yellow
+					.heading
+						h4 BASAS HIGH TOP
+					.body
+						.img
+							img(src="./img/home/product/1a.jpg", alt="")
+						.price
+							p 360.000 VND
+						.code
+							p A60010 - DARK BLUE
+						.button
+							a(href="javascript:void(0)")._yellow
+								span.button-main Chi tiết
+								span.button-circle
+						.tag
+							span Sale off
+			.col-lg-4.package
+				.product-item._gray
+					.heading
+						h4 BASAS HIGH TOP
+					.body
+						.img
+							img(src="./img/home/product/1a.jpg", alt="")
+						.price
+							p 360.000 VND
+						.code
+							p A60010 - DARK BLUE
+						.button
+							a(href="javascript:void(0)")._yellow
+								span.button-main Chi tiết
+								span.button-circle
+						
+			.col-lg-4.package
+				.product-item._green
+					.heading
+						h4 BASAS HIGH TOP
+					.body
+						.img
+							img(src="./img/home/product/1a.jpg", alt="")
+						.price
+							p 360.000 VND
+						.code
+							p A60010 - DARK BLUE
+						.button
+							a(href="javascript:void(0)")._yellow
+								span.button-main Chi tiết
+								span.button-circle 
+						.tag
+							span New
+

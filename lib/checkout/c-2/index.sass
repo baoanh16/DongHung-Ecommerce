@@ -1,0 +1,221 @@
+.dh-thanhtoan-2
+	position: relative
+	z-index: 61
+	margin-bottom: 80px
+	h1
+		font-size: 1.875rem
+		color: #333333
+		font-weight: 400
+		margin: 20px 0 25px 28px
+	h2
+		font-size: 16px
+		font-weight: 400
+		color: #999999
+		margin-top: 25px
+		padding-left: 37px
+		margin-bottom: 20px
+		@media (max-width: 576px)
+			padding: 0
+	.login-form
+		background: #fff
+		padding: 40px 0 25px 28px
+		border: 1px solid #d7d7d7
+		@media (max-width: 576px)
+			padding: 40px 20px
+	ul
+		list-style: none
+		padding-left: 37px
+		li
+			+ li
+				margin-top: 10px
+			input
+				margin-right: 20px
+				display: none
+				&:checked ~ label:before
+					background: #fff
+				&:checked ~ label:after
+					display: block
+			label
+				font-size: 15px
+				color: #333
+				font-weight: 700
+				text-transform: uppercase
+				position: relative
+				&:before
+					position: absolute
+					content: ''
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					background: #ebebeb
+					border: 1px solid #d7d7d7
+					left: -37px
+					top: 50%
+					transform: translateY(-50%)
+				&:after
+					position: absolute
+					display: none
+					content: ''
+					width: 10px
+					height: 10px
+					border-radius: 50%
+					background: #1f2b7a
+					border: 1px solid #d7d7d7
+					left: -34px
+					top: 50%
+					transform: translateY(-50%)
+	.checkout-user
+		padding: 0 65px 0 37px 
+		@media (max-width: 576px)
+			padding: 0
+	.form-group
+		display: flex
+		flex-direction: column
+		+ .form-group
+			margin-top: 25px
+		&.form-link
+			flex-direction: row
+			color: #999999
+			a
+				+ a
+					margin-left: 30px
+		label
+			font-weight: 700
+			font-size: 16px
+		input[type=text],input[type=password]
+			height: 50px
+			padding-left: 5px
+			border: 0
+			border: 1px solid #d7d7d7
+	input[type=submit]
+		width: 100%
+		height: 50px
+		background: #07074e
+		color: #fff
+		border: 0
+		font-size: 18px
+		margin-top: 20px
+	.other-text
+		margin-top: 30px
+		color: #1e1f20
+		font-weight: 700
+	.other-text,.other-login
+		padding: 0
+	.other-login
+		margin-top: 20px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		@media (max-width: 576px)
+			padding: 0
+	.fb-login,.gg-login
+		display: flex
+		flex: 0 0 calc(50% - 6px)
+		max-width: 0 0 calc(50% - 6px)
+		height: 70px
+		background: #3b5998
+		color: #fff
+		text-decoration: none
+		.icon
+			flex: 0 0 70px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 30px
+			border-right: 1px solid white	
+		span
+			display: flex
+			flex: auto
+			justify-content: center
+			align-items: center
+			font-size: 18px
+		@media (max-width: 576px)
+			flex: 0 0 100%
+			max-width: 100%
+	.gg-login
+		background: #cc081c
+		@media (max-width: 576px)
+			margin-top: 12px
+	.summary-coupon-wrapper
+		margin-left: 16.666%
+		@media (max-width: 992px)
+			margin-left: 0
+			margin-top: 30px
+		h3
+			margin-bottom: 28px
+			font-size: 18px
+			text-transform: uppercase
+			color: #1e1f20
+	.cart-coupon
+		padding: 28px
+		border: 1px solid #d7d7d7
+		border-top: 8px solid #f6dfcb
+		background: #fff
+		.form-group
+			display: flex
+			flex-direction: row
+			width: 100%
+			input
+				width: 70%
+				height: 50px
+				padding-left: 5px
+				border: 1px solid #d7d7d7
+			button
+				height: 50px
+				width: 30%
+				background: #f58220
+				border: 0
+				color: #08084f
+				text-transform: uppercase
+				font-size: 14px
+				font-weight: 700
+				border: 1px solid #d7d7d7
+				border-left: 0
+	.cart-summary
+		background: #fff
+		margin-top: 30px
+		border: 1px solid #d7d7d7
+		border-top: 8px solid #d2d5e4
+		h3
+			padding: 28px
+			border-bottom: 1px solid #d7d7d7
+			margin-bottom: 0
+			display: flex
+			justify-content: space-between
+			align-items: center
+		.cart-product,.sub-total,.shipping-fee,.discount,.total-price
+			padding: 28px
+			border-bottom: 1px solid #d7d7d7
+			display: flex
+			justify-content: space-between
+			font-size: 14px
+			color: #1e1f20
+			line-height: 25px
+			@media (max-width: 576px)
+				padding: 28px 14px
+			.product-name
+				.name
+					font-weight: 700
+			.product-price
+				text-align: right
+				.total
+					font-weight: 700
+		.sub-total,.shipping-fee,.discount,.total-price
+			strong
+				text-transform: uppercase
+				font-size: 16px
+			span
+				font-weight: 700
+		.total-price
+			strong
+				display: flex
+				flex-direction: column
+				small
+					font-weight: 400
+					font-size: 14px
+					color: #999999
+			span
+				font-size: 24px
+				color: #1f2b7a
+				font-weight: 400
+				text-align: right

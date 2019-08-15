@@ -33,7 +33,8 @@
 						transform: scaleX(0)
 						transform-origin: center right
 						transition: transform .45s cubic-bezier(.4,0,0,1)
-					&:hover, &.active
+				&:hover, &.active
+					a
 						&:after
 							transform: scaleX(1)
 							transition: transform .45s cubic-bezier(.4,0,0,1)
@@ -86,11 +87,11 @@
 		width: 100%
 		margin-top: 2.0625rem
 		.input
-			display: flex
+			display: inline-flex
 			position: relative
 			align-items: center
 			input
-				width: 100%
+				width: 17.5rem
 				padding: .625rem
 				background-color: #161718
 				border: none
@@ -176,11 +177,6 @@
 			+pad(null 15px)
 		.footer-circle
 			display: none
-	+media-breakpoint-up(sm)
-		.newsletter
-			.input
-				max-width: 350px
-				input
 	+media-breakpoint-up(lg)
 		+pad(0)
 		height: 100vh

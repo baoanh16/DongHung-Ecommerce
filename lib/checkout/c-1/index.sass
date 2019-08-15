@@ -1,0 +1,183 @@
+.dh-thanhtoan-1
+	position: relative
+	z-index: 61
+	h1
+		font-size: 3.75rem
+		color: #333333
+		font-weight: 400
+		margin: 20px 0 25px 40px
+	.cart-table
+		border-top: 8px #d2d5e4 solid
+	.summary-row
+		margin-top: 50px
+		@media (max-width: 576px)
+			.col-sm-6
+				&:first-child
+					order: 2
+				&:last-child
+					order: 1
+	.summary-cart
+		border-top: 8px #d2d5e4 solid
+		padding: 50px 28px 0
+		max-width: 385px
+		margin-left: auto
+		background: #fff
+		.total
+			display: flex
+			justify-content: space-between
+			margin-bottom: 18px
+			span
+				display: flex
+				align-items: flex-end
+				font-size: 18px
+				color: #1e1f20
+				text-transform: uppercase
+				&:first-child
+					font-weight: 700
+			&.total-price
+				margin-bottom: 0
+				span
+					&:last-child
+						color: #1f2b7a
+						font-size: 24px
+		.note
+			color: #999999
+			margin-top: 12px
+		@media (max-width: 576px)
+			max-width: none
+			margin-bottom: 30px
+	.btn-wrapper
+		display: flex
+		height: 100%
+		align-items: flex-end
+	.btn-continue,.btn-checkout
+		width: 20.3125rem
+		height: 4.375rem
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		background: #d2d5e4
+		color: #07074e
+		font-size: 1.125rem
+		margin-top: auto
+		em
+			margin-right: 1.875rem
+		@media (max-width: 576px)
+			width: 100%
+	.btn-checkout
+		color: #fff
+		background: #07074e
+		margin-top: 36px
+		em
+			margin-right: 0
+			margin-left: 1.875rem
+	table
+		width: 100%
+		tr
+			background: #fff
+			border-bottom: 1px solid #d6d6d6
+			border-right: 1px solid #d6d6d6
+			border-left: 1px solid #d6d6d6
+		thead
+			th
+				text-transform: uppercase
+				font-size: 1.125rem
+				color: #1e1f20
+				font-weight: 700
+				padding: 30px 0
+				&:first-child
+					width: 46px
+		tbody
+			.remove-cart
+				color: #d5d5d5
+				font-size: 20px
+				text-align: center
+				display: block
+			.product-cart
+				display: flex
+				align-items: center
+				text-decoration: none
+			.product-img
+				width: 100px
+				margin-right: 10px
+			.product-name
+				color: #1e1f20
+				font-weight: 700
+			.product-size
+				text-align: left
+			.product-quantity
+				display: flex
+				background: #f6f6f6
+				width: 7.5rem
+				padding: 6px
+				align-items: center
+				justify-content: center
+				input
+					width: 100%
+					margin: 0 13px
+					text-align: center
+				.btn-des,.btn-inc
+					font-size: 20px
+					color: #666666
+					cursor: pointer
+			.product-price,.product-discount
+				text-align: left
+			.product-discount
+				color: #f58220
+			.product-total
+				text-align: left
+				color: #1f2b7a
+			td
+				&:nth-child(3)
+					width: 9%
+				@media (max-width: 992px)
+					&:nth-child(5)
+						width: 15%
+		@media (max-width: 576px)
+			thead
+				display: none
+			tbody
+				display: block
+				tr
+					display: flex
+					flex-direction: column
+					position: relative
+					margin-bottom: 10px
+				td
+					display: block
+					width: 100% !important
+					padding: 0 15px
+					margin-bottom: 15px
+					font-size: 16px
+					&:nth-child(3)
+						display: flex
+						justify-content: flex-end
+						&:before
+							content: attr(data-title) ': '
+							margin-right: 5px
+			.product-cart
+				padding-right: 30px
+			.remove-cart
+				position: absolute
+				top: 15%
+				right: 15px
+			.product-quantity
+				margin-left: auto
+			.product-price,.product-discount,.product-total
+				text-align: right !important
+			.product-total
+				font-size: 20px
+.dh-viewed-product
+	position: relative
+	z-index: 61
+	margin-top: 60px
+	h2
+		font-size: 1.875rem
+		color: #333333
+		font-weight: 400
+		margin: 20px 0 25px 40px
+	.product-item
+		max-width: none
+		@media (max-width: 992px)
+			max-width: 400px

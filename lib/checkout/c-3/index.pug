@@ -1,0 +1,186 @@
+section.dh-thanhtoan-3
+	.dh-container
+		.row
+			.col-lg-7
+				.cart-address-edit
+					h2 Thông tin người mua
+					.address-form
+						.row
+							.form-group.col-12
+								label Họ Tên 
+									small *
+								input(type="text", name="")
+							.form-group.col-sm-6
+								label Họ Tên 
+									small *
+								input(type="text", name="")
+							.form-group.col-sm-6
+								label Họ Tên 
+									small *
+								input(type="text", name="")
+							.form-group.col-sm-6
+								label Tỉnh / Thành phố 
+									small *
+								select(name="")
+									option lorem 1
+									option lorem 1
+									option lorem 1
+							.form-group.col-sm-6
+								label Quận / Huyện 
+									small *
+								select(name="")
+									option lorem 1
+									option lorem 1
+									option lorem 1
+							.form-group.col-12
+								label Địa chỉ 
+									small *
+								input(type="text", name="")
+							.form-group.col-12
+								label Ghi chú
+								textarea(name="", cols="30", rows="10")
+						.row
+							.form-check.col-12
+								input#same-address(type="radio", name="rdo-address", checked)
+								label(for="same-address") Giao hàng đến địa chỉ trên
+							.form-check.col-12
+								input#other-address(type="radio", name="rdo-address")
+								label(for="other-address") Giao hàng đến địa chỉ khác
+							.user-form.col-12
+								.row
+									.form-group.col-12
+										label Họ Tên 
+											small *
+										input(type="text", name="")
+									.form-group.col-sm-6
+										label Họ Tên 
+											small *
+										input(type="text", name="")
+									.form-group.col-sm-6
+										label Họ Tên 
+											small *
+										input(type="text", name="")
+									.form-group.col-sm-6
+										label Tỉnh / Thành phố 
+											small *
+										select(name="")
+											option lorem 1
+											option lorem 1
+											option lorem 1
+									.form-group.col-sm-6
+										label Quận / Huyện 
+											small *
+										select(name="")
+											option lorem 1
+											option lorem 1
+											option lorem 1
+									.form-group.col-12
+										label Địa chỉ 
+											small *
+										input(type="text", name="")
+									.form-group.col-12
+										label Ghi chú
+										textarea(name="", cols="30", rows="10")
+							.form-check.col-12
+								input#bill-export(type="checkbox", name="chk-billexport")
+								label(for="bill-export") Xuất hoá đơn
+							.bill-export-wrapper.col-12
+								.bill-export-form
+									.row
+										.form-group.col-sm-6
+											label Họ Tên 
+												small *
+											input(type="text", name="")
+										.form-group.col-sm-6
+											label Họ Tên 
+												small *
+											input(type="text", name="")
+										.form-group.col-12
+											label Họ Tên 
+												small *
+											input(type="text", name="")
+				.cart-shipping-edit
+					h2 Phương thức vận chuyển
+					.shipping-form
+						.row
+							.form-check.col-sm-6
+								input#sm1(type="radio", name="ShippingMethod")
+								label(for="sm1")
+									span Đặt hàng và giao hàng tận nơi
+							.form-check.col-sm-6
+								input#sm2(type="radio", name="ShippingMethod")
+								label(for="sm2")
+									span Đặt hàng và nhận tại cửa hàng
+				.cart-payment-edit
+					h2 Phương thức thanh toán
+					.payment-form
+						.row
+							.form-check.col-12
+								input#pm1(type="radio", name="PaymentMethod")
+								label(for="pm1")
+									.icon
+										img(src="./img/payment/1.png", alt="")
+									.description
+										strong Thanh toán khi nhận hàng (COD)
+										span Chỉ áp dụng cho các khách hàng ở TP.Hồ Chí Minh
+							.form-check.col-12
+								input#pm2(type="radio", name="PaymentMethod")
+								label(for="pm2")
+									.icon
+										img(src="./img/payment/2.png", alt="")
+									.description
+										strong Thanh toán khi nhận hàng (COD)
+										span Chỉ áp dụng cho các khách hàng ở TP.Hồ Chí Minh
+							.form-check.col-12
+								input#pm3(type="radio", name="PaymentMethod")
+								label(for="pm3")
+									.icon
+										img(src="./img/payment/3.png", alt="")
+									.description
+										strong Thanh toán khi nhận hàng (COD)
+										span Chỉ áp dụng cho các khách hàng ở TP.Hồ Chí Minh
+				.btn-wrapper
+					a(href="#").btn-back 
+						em.lnr.lnr-chevron-left
+						span Quay lại
+					a(href="#").btn-continue
+						span Thanh toán
+						em.lnr.lnr-chevron-right
+			.col-lg-5
+				.summary-coupon-wrapper
+					.cart-coupon
+						h3 Mã giảm giá - quà tặng
+						.form-group
+							input(type="text")
+							button.btn-submitcoupon áp dụng
+					.cart-summary
+						h3 ĐƠN HÀNG CỦA BẠN
+						.cart-product
+							.product-name
+								.name Basas High Top
+								.subtitle Cloudburst
+							.product-price
+								.price 360,000 VNĐ
+								.quantity x1
+								.total 290,000 VNĐ
+						.cart-product
+							.product-name
+								.name Basas High Top
+								.subtitle Cloudburst
+							.product-price
+								.price 360,000 VNĐ
+								.quantity x1
+								.total 290,000 VNĐ
+						.sub-total
+							strong Tạm tính
+							span 855,000 VNĐ
+						.shipping-fee
+							strong phí vận chuyển
+							span 855,000 VNĐ
+						.discount
+							strong GIẢM GIÁ
+							span 855,000 VNĐ
+						.total-price
+							strong TỔNG CỘNG
+								small Giá chưa bao gồm VAT
+							span 785,000 VNĐ

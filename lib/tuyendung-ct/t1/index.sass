@@ -1,3 +1,6 @@
+.news-detail-page
+	.dh-tuyendung-1,.dh-tuyendung-2
+		display: none
 .dh-tuyendung-ct-1
 	.dh-container
 		background: #fff
@@ -20,7 +23,7 @@
 				color: #666666
 	.request 
 		+fz(r(16px))
-		padding: r(30px) 1rem
+		padding: r(30px) 1rem 0
 		border-bottom: 1px solid #d6d6d6 
 		h4,p 
 			+fz(18px)
@@ -28,6 +31,8 @@
 			color: #999999 
 		p 
 			color: #333333
+		.attr-item
+			margin-bottom: r(30px)
 	.fullContent
 		+fz(r(16px))
 		padding: r(30px) 1rem
@@ -39,8 +44,11 @@
 			img
 				width: 100%
 		ul 
-			list-style: none 
-			padding-left: 0
+			list-style: none !important
+			padding-left: 0 !important
+			display: block !important
+			&:before
+				display: none
 			li 
 				&:before 
 					content: '-' 

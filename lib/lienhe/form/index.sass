@@ -1,5 +1,7 @@
 .dh-form 
 	+pad(r(100px) 0)
+	z-index: 61
+	position: relative
 	.collection-item 
 		height: 100%
 		background: #fff
@@ -11,24 +13,19 @@
 		p 
 			+fz(r(16px)) 
 			color: #999999 
+			margin-bottom: 30px
 		&.bg-top 
 			box-shadow: inset 0px 8px 0 0px #d2d5e4 
 			background-position: center center
 			background-repeat: no-repeat
 			background-position-y: 74px
-			background-image: url("../img/lienhe/1.png")
+			background-image: url(".././img/lienhe/1.png")
+			p
+				margin-bottom: 0
 		.contact-form 
-			padding-top: r(35px)
 			.wrap-form 
-				margin: 0 r(-10px)
-				div 
-					display: flex
-					flex-wrap: wrap
 				.form-group 
 					margin-bottom: r(30px)
-					padding: 0 r(10px)
-					flex: 0 0 50%
-					max-width: 50%
 					label 
 						display: inline-block 
 						+fz(r(16px))
@@ -42,9 +39,6 @@
 							outline: none
 					textarea 
 						height: r(120px) 
-					&.qparagraph 
-						max-width: 100%
-						flex: 0 0 100%
 					&.frm-btnwrap 
 						.frm-btn 
 							.btn
@@ -61,7 +55,7 @@
 			margin-top: r(20px)
 			display: flex 
 			align-items: center 
-			i 
+			i,em 
 				+fz(r(20px))
 				border-radius: 50%
 				background-color: rgb(248, 245, 238)
@@ -70,7 +64,7 @@
 				line-height: 50px 
 				text-align: center 
 			p 
-				max-width: 225px
+				max-width: 400px
 				+fz(r(16px)) 
 				color: #333333 
 				margin-left: r(20px)

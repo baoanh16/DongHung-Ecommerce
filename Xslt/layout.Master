@@ -1,0 +1,355 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+
+<!DOCTYPE html>
+<html id="Html1" runat="server">
+
+<head id="Head1" runat="server">
+	<title></title>
+	<portal:MetaContent ID="MetaContent" runat="server" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+		JQueryUIThemeName="smoothness" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/skins/default/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/skins/default/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/Data/Sites/1/skins/default/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/Data/Sites/1/skins/default/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/Data/Sites/1/skins/default/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/Data/Sites/1/skins/default/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/Data/Sites/1/skins/default/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/Data/Sites/1/skins/default/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/Data/Sites/1/skins/default/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"
+		href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/Data/Sites/1/skins/default/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500,600,700&amp;subset=vietnamese"
+		rel="stylesheet">
+
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="true" />
+	<!-- <portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/core.min.js"
+		AddToCombinedScript="true" />
+	<portal:SkinFolderScript ID="SkinFolderScript2" AddToCombinedScript=" true" />
+	<portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/ecommerce.js"
+		AddToCombinedScript="true" /> -->
+	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
+
+	<!--*********************************************************************************************-->
+	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
+	<!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
+	<!-- Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn                    -->
+	<!-- Facebook: https://www.facebook.com/canhcam.vn                                               -->
+	<!--*********************************************************************************************-->
+</head>
+
+<body id="Body" runat="server" class="canhcam">
+	<portal:FacebookSdk ID="fbsdk" runat="server" />
+	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+	<form id="frmMain" runat="server">
+		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+		<div id="wrapper">
+			<header class="dh-header">
+				<div class="top-wrapper">
+					<portal:ModuleWrapper ID="mdl207" runat="server" ConfigureModuleId="207" />
+				</div>
+				<div class="main-wrapper">
+					<div class="dh-logo">
+						<a href="/">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 212.6 212.6"
+								style="enable-background:new 0 0 212.6 212.6;" xml:space="preserve">
+								<style type="text/css">
+									.st0 {
+										fill: #160E44;
+									}
+
+									.st1 {
+										fill: #FFFFFF;
+									}
+
+								</style>
+								<rect y="0" class="st0" width="212.6" height="212.6" />
+								<g>
+									<g>
+										<g>
+											<path class="st1" d="M88.91,147.31v27.52h-6.35v-11.7c-1.11-0.33-2.34-0.56-3.68-0.56l0,0l0,0l0,0c-1.23,0-2.45,0.22-3.57,0.56
+				v11.7h-6.35v-27.52h6.35v11.7c1.11,0.33,2.34,0.56,3.68,0.56s2.56-0.22,3.68-0.56v-11.7H88.91z" />
+											<path class="st1" d="M137.16,156.33v-5.46c0-0.11,0-0.22,0-0.22c-0.11-0.33-0.33-0.67-0.67-0.89l0,0l0,0l0,0
+				c-0.89-0.33-1.78-0.56-2.79-0.56l0,0l0,0l0,0l0,0c-0.11,0-0.33,0-0.45,0c-0.89,0.11-1.67,0.22-2.34,0.56l0,0c0,0,0,0-0.11,0l0,0
+				c-0.33,0.11-0.67,0.45-0.67,0.89c0,0.11,0,0.22,0,0.22v20.95v0.11c0.11,0.33,0.33,0.67,0.67,0.78l0,0
+				c0.89,0.33,1.78,0.56,2.9,0.56l0,0l0,0h0.22c1,0,1.89-0.22,2.79-0.56c0,0,0.11,0,0.11-0.11c0.22-0.11,0.45-0.33,0.56-0.56v-6.91
+				h-2.45c-0.11,0-0.22,0-0.33-0.11c-0.45-0.11-0.89-0.67-0.89-1.11v-1c0-0.67,0.56-1.23,1.23-1.23h7.58c0.67,0,1.11,0.45,1.23,1.11
+				v9.58c0,0.33-0.22,0.67-0.56,0.89c0,0-0.11,0-0.11,0.11l0,0c-0.89,0.45-1.78,0.78-2.79,1.11c-2.01,0.67-4.12,1-6.46,1h-0.22
+				c-2.23,0-4.35-0.33-6.35-1c-1-0.33-1.89-0.67-2.79-1.11l0,0c0,0-0.11,0-0.11-0.11c-0.33-0.22-0.56-0.56-0.56-0.89v-22.73
+				c0.11-0.33,0.33-0.56,0.56-0.67c0,0,0.11,0,0.11-0.11c0.89-0.45,1.78-0.89,2.79-1.23c0.89-0.33,1.78-0.56,2.79-0.78
+				c1.23-0.22,2.34-0.33,3.57-0.33l0,0l0,0l0,0c0,0,0,0,0.11,0c1.23,0,2.56,0.11,3.68,0.33c0.89,0.22,1.78,0.45,2.67,0.67
+				c0.67,0.22,1.34,0.56,2.12,0.78c0.22,0.11,0.56,0.22,0.78,0.33l0,0c0,0,0.11,0,0.11,0.11c0.33,0.22,0.56,0.56,0.56,1V156
+				c0,0.45-0.33,0.89-0.67,1c-0.11,0-0.11,0-0.22,0.11c-0.56,0.22-1.11,0.33-1.78,0.33l0,0c-0.22,0-0.33,0-0.56,0
+				c-0.67,0-1.23-0.11-1.89-0.22c-0.11,0-0.33-0.11-0.45-0.11h-0.11c-0.33-0.11-0.56-0.33-0.67-0.67
+				C137.16,156.55,137.16,156.44,137.16,156.33z" />
+											<path class="st1" d="M109.97,147.31v23.62c0,0.11,0,0.22,0,0.22c-0.11,0.33-0.33,0.67-0.56,0.89c0,0-0.11,0-0.11,0.11
+				c-0.89,0.45-1.78,0.67-2.79,0.67l0,0l0,0l0,0c-1,0-2.01-0.22-2.9-0.67l0,0c-0.33-0.22-0.56-0.45-0.67-0.89c0-0.11,0-0.22,0-0.22
+				v-23.62H96.6v24.51c0,0.45,0.22,0.89,0.56,1.11l0.11,0.11l0,0c0.89,0.45,1.78,0.89,2.79,1.23c2.01,0.78,4.23,1.11,6.46,1.11
+				c2.23,0,4.46-0.45,6.46-1.11c1-0.33,1.89-0.78,2.79-1.23l0,0c0.11,0,0.11-0.11,0.22-0.11c0.33-0.22,0.56-0.67,0.56-1.11v-24.51
+				h-6.57V147.31z" />
+										</g>
+									</g>
+									<g>
+										<g>
+											<g>
+												<path class="st1" d="M100.28,74.1c1,0.78,3.01,1.11,6.02,1.11c2.79,0,4.68-0.33,5.79-1c1.11-0.67,1.78-1.45,1.78-2.45V37.1
+					H98.72v34.65C98.72,72.65,99.27,73.43,100.28,74.1z" />
+											</g>
+										</g>
+										<g>
+											<g>
+												<path class="st1" d="M112.2,95.6c-1-0.78-3.01-1.11-6.02-1.11c-2.79,0-4.68,0.33-5.79,1c-1.11,0.67-1.78,1.45-1.78,2.45v34.43
+					h15.15V97.94C113.76,97.05,113.2,96.38,112.2,95.6z" />
+											</g>
+										</g>
+										<path class="st1" d="M143.4,52.03v65.41c0,8.25-6.69,14.93-14.82,14.93h-1.89V97.94c0-1.23-0.45-2.34-1.23-3.45
+			c-0.89-1.11-2.12-2.12-3.9-3.01c-1.78-0.89-3.9-1.56-6.46-2.12c-2.56-0.56-5.57-0.78-9.03-0.78c-3.57,0-6.69,0.22-9.25,0.89
+			c-2.56,0.56-4.68,1.23-6.24,2.12c-1.67,0.89-2.79,1.89-3.57,3.01s-0.78,2.23-0.78,3.23l-0.33,34.32
+			c-9.25,0-16.71-5.57-16.71-14.93V52.03c0-8.25,6.69-14.93,14.82-14.93h1.89v34.32c0,1.23,0.45,2.34,1.23,3.45
+			c0.89,1.11,2.12,2.12,3.9,3.01c1.78,0.89,3.9,1.56,6.46,2.12c2.56,0.56,5.57,0.78,9.03,0.78c3.57,0,6.69-0.33,9.25-0.89
+			c2.56-0.56,4.68-1.23,6.24-2.12c1.67-0.89,2.79-1.89,3.57-3.01c0.78-1.11,0.78-2.23,0.78-3.23l0.33-34.32
+			C135.82,37.1,143.4,42.79,143.4,52.03z" />
+									</g>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<div class="toggle-button">
+						<div class="button"></div>
+					</div>
+				</div>
+				<div class="nav-wrapper">
+					<div class="nav">
+						<portal:ModuleWrapper ID="mdl209" runat="server" ConfigureModuleId="209" />
+					</div>
+					<div class="last-nav">
+						<div class="user">
+							<portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="false"
+								IconCssClass="fas fa-user" CssClass="login-inner" />
+							<portal:welcomemessage id="WelcomeMessage" runat="server" WrapInProfileLink="true"
+								ProfileLink="~/Account/UserProfile.aspx" RenderAsListItem="false" listitemcss="firstnav"
+								CssClass="welcome-message" />
+							<portal:LogoutLink ID="LogoutLink" runat="server" RenderAsListItem="false"
+								CssClass="logout" />
+						</div>
+						<div class="shopping">
+							<portal:ModuleWrapper ID="mdl249" runat="server" ConfigureModuleId="249" />
+						</div>
+						<div class="heart"><a href="javascript:void(0)"><img
+									src="/Data/Sites/1/skins/default/img/heart.png" alt=""></a></div>
+					</div>
+				</div>
+				<div class="header-wrapper">
+					<div class="dh-container no-gutters">
+						<div class="top-nav">
+							<div class="title">
+								<portal:ModuleWrapper ID="mdl210" runat="server" ConfigureModuleId="210" />
+							</div>
+							<div class="nav-list">
+								<div class="language">
+									<portal:ModuleWrapper ID="mdl211" runat="server" ConfigureModuleId="211" />
+								</div>
+							</div>
+						</div>
+						<div class="main-nav">
+							<div class="lg1-2">
+								<div class="nav-list-active">
+									<div class="title">
+										<portal:ModuleWrapper ID="mdl212" runat="server" ConfigureModuleId="212" />
+									</div>
+									<portal:ModuleWrapper ID="mdl213" runat="server" ConfigureModuleId="213" />
+								</div>
+								<div class="nav-circle"></div>
+							</div>
+							<div class="lg1-2">
+								<div class="main-nav-active"></div>
+								<div class="nav-text">
+									<portal:ModuleWrapper ID="mdl214" runat="server" ConfigureModuleId="214" />
+								</div>
+							</div>
+						</div>
+						<div class="footer-nav">
+							<portal:ModuleWrapper ID="mdl215" runat="server" ConfigureModuleId="215" />
+						</div>
+					</div>
+				</div>
+			</header>
+			<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+				<asp:ContentPlaceHolder ID="altContent1" runat="server">
+				</asp:ContentPlaceHolder>
+			</asp:Panel>
+			<main>
+				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="leftContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+					SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="mainContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="rightContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<article class="grid">
+					<div class="lineY">
+						<div class="line-c"></div>
+						<div class="line-l"></div>
+						<div class="line-r"></div>
+					</div>
+					<div class="lineX">
+						<div class="line-t"></div>
+						<div class="line-b"></div>
+					</div>
+				</article>
+				<article class="find-shop">
+					<portal:ModuleWrapper ID="mdl226" runat="server" ConfigureModuleId="226" />
+				</article>
+			</main>
+			<footer class="dh-footer">
+				<div class="dh-container">
+					<div class="top-nav">
+						<div class="first-nav">
+							<portal:ModuleWrapper ID="mdl216" runat="server" ConfigureModuleId="216" />
+						</div>
+						<div class="last-nav">
+							<div class="language">
+								<portal:ModuleWrapper ID="mdl218" runat="server" ConfigureModuleId="218" />
+							</div>
+							<div class="user"><a href="javascript:void(0)">Đăng nhập</a></div>
+							<div class="shopping"><a href="javascript:void(0)"><img
+										src="/Data/Sites/1/skins/default/img/shopping.png" alt=""></a>
+							</div>
+							<div class="heart"><a href="javascript:void(0)"><img
+										src="/Data/Sites/1/skins/default/img/heart.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="main-nav">
+						<div class="content">
+							<div class="lg1-2">
+								<div class="nav-list-active">
+									<div class="title">
+										<portal:ModuleWrapper ID="mdl217" runat="server" ConfigureModuleId="217" />
+									</div>
+									<portal:ModuleWrapper ID="mdl219" runat="server" ConfigureModuleId="219" />
+								</div>
+								<div class="newsletter">
+									<div class="title">
+										<portal:ModuleWrapper ID="mdl220" runat="server" ConfigureModuleId="220" />
+									</div>
+									<div class="input">
+										<portal:ModuleWrapper ID="mdl222" runat="server" ConfigureModuleId="222" />
+									</div>
+								</div>
+							</div>
+							<div class="lg1-2">
+								<div class="hotline">
+									<div class="title">
+										<portal:ModuleWrapper ID="mdl223" runat="server" ConfigureModuleId="223" />
+									</div>
+									<div class="button">
+										<portal:ModuleWrapper ID="mdl224" runat="server" ConfigureModuleId="224" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<portal:ModuleWrapper ID="mdl225" runat="server" ConfigureModuleId="225" />
+					<div class="footer-circle"></div>
+			</footer>
+		</div>
+		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav>
+						<ul class="nav navbar-nav listmenu">
+							<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+								runat="server" />
+							<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+								runat="server" />
+							<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<li>
+								<div class="form-inline">
+									<div class="form-group">
+										<label class="sr-only">Mode</label>
+									</div>
+									<div class="form-group">
+										<asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+										</asp:ContentPlaceHolder>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav">
+							<li><a href="#" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$("#pullmenucms").click(function (e) {
+						e.preventDefault();
+						if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+							ShowToolbar();
+							Set_Cookie('toolbarOpenState', 'open');
+						} else {
+							HideToolbar();
+							Set_Cookie('toolbarOpenState', 'closed');
+						}
+					});
+					var openState = Get_Cookie('toolbarOpenState');
+					if (openState != null) {
+						if (openState == 'closed') {
+							HideToolbar();
+						}
+						if (openState == 'open') {
+							ShowToolbar();
+						}
+					}
+				});
+
+				function HideToolbar() {
+					$('.cmsadminpanel').addClass("toggled");
+					$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+				}
+
+				function ShowToolbar() {
+					$('.cmsadminpanel').removeClass("toggled");
+					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+				}
+
+			</script>
+		</portal:AutoHidePanel>
+		<portal:Woopra ID="woopra11" runat="server" />
+	</form>
+</body>
+
+<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
+<script src="/Data/Sites/1/skins/default/js/ecommerce.js"></script>
+<script src="/Data/Sites/1/skins/default/js/main.js"></script>
+
+
+</html>
